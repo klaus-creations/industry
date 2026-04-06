@@ -4,6 +4,28 @@ import { motion, AnimatePresence } from 'motion/react';
 import { PRODUCTS } from '../constants/data';
 import { Product } from '../types';
 
+const ProductImage = ({ product, className }: { product: Product; className?: string }) => {
+  const [imgSrc, setImgSrc] = useState(product.image);
+  const [hasError, setHasError] = useState(false);
+
+  const handleError = () => {
+    if (!hasError && product.fallbackImage) {
+      setImgSrc(product.fallbackImage);
+      setHasError(true);
+    }
+  };
+
+  return (
+    <img 
+      src={imgSrc} 
+      className={className} 
+      alt={product.name} 
+      onError={handleError}
+      referrerPolicy="no-referrer" 
+    />
+  );
+};
+
 export const ProductsPage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
@@ -60,7 +82,7 @@ export const ProductsPage = () => {
               onClick={() => setSelectedProduct(p)}
             >
               <div className="aspect-square overflow-hidden relative">
-                <img src={p.image} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={p.name} referrerPolicy="no-referrer" />
+                <ProductImage product={p} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute top-4 right-4 glass px-2 py-1 rounded-xs text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
                   <Globe size={10} /> {p.origin}
                 </div>
@@ -105,7 +127,7 @@ export const ProductsPage = () => {
               </button>
               
               <div className="w-full md:w-1/2 aspect-square md:aspect-auto">
-                <img src={selectedProduct.image} className="w-full h-full object-cover" alt={selectedProduct.name} referrerPolicy="no-referrer" />
+                <ProductImage product={selectedProduct} className="w-full h-full object-cover" />
               </div>
               
               <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto">

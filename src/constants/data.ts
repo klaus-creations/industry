@@ -2,29 +2,181 @@ import { Product, Testimonial, TeamMember, FAQItem } from '../types';
 
 export const PRODUCTS: Product[] = [
   // Industrial Chemicals
-  { id: '1', name: 'Caustic Soda', category: 'Industrial Chemicals', image: 'https://picsum.photos/seed/caustic-soda/800/800', origin: 'Global', description: 'Sodium hydroxide, also known as lye and caustic soda, is an inorganic compound with the formula NaOH. It is a highly caustic base and alkali that decomposes proteins at ordinary ambient temperatures.' },
-  { id: '2', name: 'Citric Acid', category: 'Industrial Chemicals', image: 'https://picsum.photos/seed/citric-acid/800/800', origin: 'Global', description: 'Citric acid is a weak organic acid that has the chemical formula C6H8O7. It occurs naturally in citrus fruits. In biochemistry, it is an intermediate in the citric acid cycle.' },
-  { id: '3', name: 'Sulfuric Acid', category: 'Industrial Chemicals', image: 'https://picsum.photos/seed/sulfuric-acid/800/800', origin: 'Global', description: 'Sulfuric acid is a mineral acid composed of the elements sulfur, oxygen and hydrogen, with the molecular formula H2SO4. It is a colorless, odorless and viscous liquid that is miscible with water.' },
-  { id: '4', name: 'Nitric Acid', category: 'Industrial Chemicals', image: 'https://picsum.photos/seed/nitric-acid/800/800', origin: 'Global', description: 'Nitric acid (HNO3), also known as aqua fortis and spirit of niter, is a highly corrosive mineral acid. The pure compound is colorless, but older samples tend to acquire a yellow cast due to decomposition into oxides of nitrogen and water.' },
-  { id: '5', name: 'Hydrochloric Acid', category: 'Industrial Chemicals', image: 'https://picsum.photos/seed/hydrochloric-acid/800/800', origin: 'Global', description: 'Hydrochloric acid or muriatic acid is a colorless inorganic chemical system with the formula HCl. Hydrochloric acid has a distinctive pungent smell.' },
+  { 
+    id: '1', 
+    name: 'Caustic Soda', 
+    category: 'Industrial Chemicals', 
+    image: '/images/caustic-soda.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1532187863486-abf9d39d99c5?q=80&w=800',
+    origin: 'Global', 
+    description: 'Sodium hydroxide, also known as lye and caustic soda, is an inorganic compound with the formula NaOH. It is a highly caustic base and alkali that decomposes proteins at ordinary ambient temperatures.' 
+  },
+  { 
+    id: '2', 
+    name: 'Citric Acid', 
+    category: 'Industrial Chemicals', 
+    image: '/images/citric-acid.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=800',
+    origin: 'Global', 
+    description: 'Citric acid is a weak organic acid that has the chemical formula C6H8O7. It occurs naturally in citrus fruits. In biochemistry, it is an intermediate in the citric acid cycle.' 
+  },
+  { 
+    id: '3', 
+    name: 'Sulfuric Acid', 
+    category: 'Industrial Chemicals', 
+    image: '/images/sulfuric-acid.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800',
+    origin: 'Global', 
+    description: 'Sulfuric acid is a mineral acid composed of the elements sulfur, oxygen and hydrogen, with the molecular formula H2SO4. It is a colorless, odorless and viscous liquid that is miscible with water.' 
+  },
+  { 
+    id: '4', 
+    name: 'Nitric Acid', 
+    category: 'Industrial Chemicals', 
+    image: '/images/nitric-acid.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800',
+    origin: 'Global', 
+    description: 'Nitric acid (HNO3), also known as aqua fortis and spirit of niter, is a highly corrosive mineral acid. The pure compound is colorless, but older samples tend to acquire a yellow cast due to decomposition into oxides of nitrogen and water.' 
+  },
+  { 
+    id: '5', 
+    name: 'Hydrochloric Acid', 
+    category: 'Industrial Chemicals', 
+    image: '/images/hydrochloric-acid.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800',
+    origin: 'Global', 
+    description: 'Hydrochloric acid or muriatic acid is a colorless inorganic chemical system with the formula HCl. Hydrochloric acid has a distinctive pungent smell.' 
+  },
 
   // Laboratory Chemicals
-  { id: '6', name: 'MacConkey Broth', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/macconkey-broth/800/800', origin: 'Global', description: 'MacConkey Broth is used for the detection of coliform organisms in milk and water. It is a modification of the original MacConkey medium.' },
-  { id: '7', name: 'MacConkey Agar', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/macconkey-agar/800/800', origin: 'Global', description: 'MacConkey agar is a selective and differential culture medium for bacteria. It is designed to selectively isolate Gram-negative and enteric bacilli and differentiate them based on lactose fermentation.' },
-  { id: '8', name: 'Nutrient Broth', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/nutrient-broth/800/800', origin: 'Global', description: 'Nutrient Broth is a general-purpose medium used for the cultivation of a wide variety of non-fastidious microorganisms.' },
-  { id: '9', name: 'Nutrient Agar', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/nutrient-agar/800/800', origin: 'Global', description: 'Nutrient Agar is a general-purpose medium used for the cultivation of less fastidious microorganisms, can be enriched with blood or other biological fluids.' },
-  { id: '10', name: 'PDA (Potato Dextrose Agar)', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/pda-agar/800/800', origin: 'Global', description: 'Potato Dextrose Agar is used for the cultivation of fungi. It is a common microbiological culture medium made from potato infusion and dextrose.' },
-  { id: '11', name: 'PCA (Plate Count Agar)', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/pca-agar/800/800', origin: 'Global', description: 'Plate Count Agar (PCA), also called Standard Methods Agar (SMA), is a microbiological growth medium commonly used to assess or monitor "total" or viable bacterial growth of a sample.' },
-  { id: '12', name: 'Mannitol Salt Agar', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/mannitol-salt/800/800', origin: 'Global', description: 'Mannitol salt agar or MSA is a commonly used selective and differential growth medium in microbiology. It encourages the growth of a group of certain bacteria while inhibiting the growth of others.' },
-  { id: '13', name: 'MRS Agar', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/mrs-agar/800/800', origin: 'Global', description: 'MRS Agar is used for the cultivation of all Lactobacillus species. It was designed by de Man, Rogosa and Sharpe to replace Tomato Juice Agar.' },
-  { id: '14', name: 'MRS Broth', category: 'Laboratory Chemicals', image: 'https://picsum.photos/seed/mrs-broth/800/800', origin: 'Global', description: 'MRS Broth is used for the cultivation of all Lactobacillus species. It contains polysorbate, acetate, magnesium and manganese, which act as growth factors for lactobacilli.' },
+  { 
+    id: '6', 
+    name: 'MacConkey Broth', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/macconkey-broth.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=800',
+    origin: 'Global', 
+    description: 'MacConkey Broth is used for the detection of coliform organisms in milk and water. It is a modification of the original MacConkey medium.' 
+  },
+  { 
+    id: '7', 
+    name: 'MacConkey Agar', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/macconkey-agar.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=800',
+    origin: 'Global', 
+    description: 'MacConkey agar is a selective and differential culture medium for bacteria. It is designed to selectively isolate Gram-negative and enteric bacilli and differentiate them based on lactose fermentation.' 
+  },
+  { 
+    id: '8', 
+    name: 'Nutrient Broth', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/nutrient-broth.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800',
+    origin: 'Global', 
+    description: 'Nutrient Broth is a general-purpose medium used for the cultivation of a wide variety of non-fastidious microorganisms.' 
+  },
+  { 
+    id: '9', 
+    name: 'Nutrient Agar', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/nutrient-agar.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800',
+    origin: 'Global', 
+    description: 'Nutrient Agar is a general-purpose medium used for the cultivation of less fastidious microorganisms, can be enriched with blood or other biological fluids.' 
+  },
+  { 
+    id: '10', 
+    name: 'PDA (Potato Dextrose Agar)', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/pda-potato-dextrose-agar.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800',
+    origin: 'Global', 
+    description: 'Potato Dextrose Agar is used for the cultivation of fungi. It is a common microbiological culture medium made from potato infusion and dextrose.' 
+  },
+  { 
+    id: '11', 
+    name: 'PCA (Plate Count Agar)', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/pca-plate-count-agar.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=800',
+    origin: 'Global', 
+    description: 'Plate Count Agar (PCA), also called Standard Methods Agar (SMA), is a microbiological growth medium commonly used to assess or monitor "total" or viable bacterial growth of a sample.' 
+  },
+  { 
+    id: '12', 
+    name: 'Mannitol Salt Agar', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/mannitol-salt-agar.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800',
+    origin: 'Global', 
+    description: 'Mannitol salt agar or MSA is a commonly used selective and differential growth medium in microbiology. It encourages the growth of a group of certain bacteria while inhibiting the growth of others.' 
+  },
+  { 
+    id: '13', 
+    name: 'MRS Agar', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/mrs-agar.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800',
+    origin: 'Global', 
+    description: 'MRS Agar is used for the cultivation of all Lactobacillus species. It was designed by de Man, Rogosa and Sharpe to replace Tomato Juice Agar.' 
+  },
+  { 
+    id: '14', 
+    name: 'MRS Broth', 
+    category: 'Laboratory Chemicals', 
+    image: '/images/mrs-broth.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800',
+    origin: 'Global', 
+    description: 'MRS Broth is used for the cultivation of all Lactobacillus species. It contains polysorbate, acetate, magnesium and manganese, which act as growth factors for lactobacilli.' 
+  },
 
   // Equipment
-  { id: '15', name: 'Laboratory Glasswares', category: 'Equipment', image: 'https://picsum.photos/seed/glassware/800/800', origin: 'Global', description: 'A wide range of high-quality laboratory glassware including beakers, flasks, test tubes, and graduated cylinders for various scientific applications.' },
-  { id: '16', name: 'Dry Oven', category: 'Equipment', image: 'https://picsum.photos/seed/dry-oven/800/800', origin: 'Global', description: 'Industrial-grade dry ovens for sterilization, drying, and heat treatment of laboratory equipment and samples.' },
-  { id: '17', name: 'Centrifuge', category: 'Equipment', image: 'https://picsum.photos/seed/centrifuge/800/800', origin: 'Global', description: 'High-performance laboratory centrifuge for the separation of fluids, gas or liquid, based on density.' },
-  { id: '18', name: 'Incubator', category: 'Equipment', image: 'https://picsum.photos/seed/incubator/800/800', origin: 'Global', description: 'Precision laboratory incubators for maintaining optimal temperature, humidity and other conditions for microbiological cultures or cell cultures.' },
-  { id: '19', name: 'Water Bath', category: 'Equipment', image: 'https://picsum.photos/seed/water-bath/800/800', origin: 'Global', description: 'Laboratory water baths for heating samples in water at a constant temperature over a long period of time.' },
+  { 
+    id: '15', 
+    name: 'Laboratory Glasswares', 
+    category: 'Equipment', 
+    image: '/images/laboratory-glasswares.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800',
+    origin: 'Global', 
+    description: 'A wide range of high-quality laboratory glassware including beakers, flasks, test tubes, and graduated cylinders for various scientific applications.' 
+  },
+  { 
+    id: '16', 
+    name: 'Dry Oven', 
+    category: 'Equipment', 
+    image: '/images/dry-oven.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800',
+    origin: 'Global', 
+    description: 'Industrial-grade dry ovens for sterilization, drying, and heat treatment of laboratory equipment and samples.' 
+  },
+  { 
+    id: '17', 
+    name: 'Centrifuge', 
+    category: 'Equipment', 
+    image: '/images/centrifuge.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1579154341098-e4e158cc7f55?q=80&w=800',
+    origin: 'Global', 
+    description: 'High-performance laboratory centrifuge for the separation of fluids, gas or liquid, based on density.' 
+  },
+  { 
+    id: '18', 
+    name: 'Incubator', 
+    category: 'Equipment', 
+    image: '/images/incubator.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800',
+    origin: 'Global', 
+    description: 'Precision laboratory incubators for maintaining optimal temperature, humidity and other conditions for microbiological cultures or cell cultures.' 
+  },
+  { 
+    id: '19', 
+    name: 'Water Bath', 
+    category: 'Equipment', 
+    image: '/images/water-bath.jpg', 
+    fallbackImage: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800',
+    origin: 'Global', 
+    description: 'Laboratory water baths for heating samples in water at a constant temperature over a long period of time.' 
+  },
 ];
 
 export const FAQS: FAQItem[] = [

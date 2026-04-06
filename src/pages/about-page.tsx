@@ -36,8 +36,8 @@ export const AboutPage = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src="https://picsum.photos/seed/about1/600/800" className="rounded-xs w-full h-80 object-cover" alt="Warehouse" referrerPolicy="no-referrer" />
-            <img src="https://picsum.photos/seed/about2/600/800" className="rounded-xs w-full h-80 object-cover mt-12" alt="Chemicals" referrerPolicy="no-referrer" />
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" className="rounded-xs w-full h-80 object-cover" alt="Warehouse" referrerPolicy="no-referrer" />
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" className="rounded-xs w-full h-80 object-cover mt-12" alt="Chemicals" referrerPolicy="no-referrer" />
           </div>
         </div>
       </section>

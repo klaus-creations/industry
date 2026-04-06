@@ -3,6 +3,7 @@ export interface Product {
   name: string;
   category: string;
   image: string;
+  fallbackImage?: string;
   origin: string;
   description?: string;
   specifications?: Record<string, string>;

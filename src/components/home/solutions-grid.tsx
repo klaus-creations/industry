@@ -6,9 +6,9 @@ interface SolutionsGridProps {
 
 export const SolutionsGrid = ({ setActivePage }: SolutionsGridProps) => {
   const solutions = [
-    { title: 'Industrial Chemicals', img: 'https://picsum.photos/seed/industrial/800/600', desc: 'High-purity acids and bases for industrial use.' },
-    { title: 'Laboratory Chemicals', img: 'https://picsum.photos/seed/laboratory/800/600', desc: 'Specialized culture media and reagents.' },
-    { title: 'Equipment', img: 'https://picsum.photos/seed/equipment/800/600', desc: 'Precision laboratory instruments and glasswares.' },
+    { title: 'Industrial Chemicals', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800', desc: 'High-purity acids and bases for industrial use.' },
+    { title: 'Laboratory Chemicals', img: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800', desc: 'Specialized culture media and reagents.' },
+    { title: 'Equipment', img: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800', desc: 'Precision laboratory instruments and glasswares.' },
   ];
 
   return (
