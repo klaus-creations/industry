@@ -9,8 +9,8 @@ export const HeroSection = ({ setActivePage }: HeroSectionProps) => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1532187875605-1ef6c237dd1d?auto=format&fit=crop&q=80&w=2000" 
+        <img
+          src="https://images.unsplash.com/photo-1532187875605-1ef6c237dd1d?auto=format&fit=crop&q=80&w=2000"
           className="w-full h-full object-cover opacity-30"
           alt="Laboratory"
           referrerPolicy="no-referrer"
@@ -28,8 +28,8 @@ export const HeroSection = ({ setActivePage }: HeroSectionProps) => {
           <Zap size={14} className="text-primary" />
           <span className="text-[10px] font-bold tracking-widest uppercase text-text/80">High Quality, Fair Price</span>
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,7 +37,7 @@ export const HeroSection = ({ setActivePage }: HeroSectionProps) => {
         >
           Your <span className="text-primary italic">trusted</span> Chemical Import Partner in Ethiopia.
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,13 +53,13 @@ export const HeroSection = ({ setActivePage }: HeroSectionProps) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col md:flex-row items-center justify-center gap-4"
         >
-          <button 
+          <button
             onClick={() => setActivePage('Products')}
             className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xs font-bold transition-all flex items-center justify-center gap-2"
           >
             Explore Products <ArrowRight size={18} />
           </button>
-          <button 
+          <button
             onClick={() => setActivePage('Contact')}
             className="w-full md:w-auto glass hover:bg-white/10 text-text px-8 py-4 rounded-xs font-bold transition-all"
           >
