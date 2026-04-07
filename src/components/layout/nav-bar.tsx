@@ -25,13 +25,7 @@ export const NavBar = ({ activePage, setActivePage, theme, toggleTheme }: NavBar
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setActivePage('Home')}>
-          <div className="w-10 h-10 bg-primary rounded-xs flex items-center justify-center">
-            <span className="text-2xl font-bold text-white">S</span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-lg font-bold tracking-tighter uppercase">Sida</span>
-            <span className="text-[10px] tracking-widest text-primary font-semibold uppercase">General Trading</span>
-          </div>
+           <img src="/images/logo.png" alt="Sida Logo" />
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -44,8 +38,8 @@ export const NavBar = ({ activePage, setActivePage, theme, toggleTheme }: NavBar
               {item}
             </button>
           ))}
-          
-          <button 
+
+          <button
             onClick={toggleTheme}
             className="w-10 h-10 glass rounded-xs flex items-center justify-center hover:bg-white/10 transition-colors"
           >
@@ -60,7 +54,7 @@ export const NavBar = ({ activePage, setActivePage, theme, toggleTheme }: NavBar
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
-          <button 
+          <button
             onClick={toggleTheme}
             className="w-10 h-10 glass rounded-xs flex items-center justify-center"
           >
