@@ -25,7 +25,7 @@ export const NavBar = ({ activePage, setActivePage, theme, toggleTheme }: NavBar
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => setActivePage('Home')}>
-           <img src="/images/logo.png" alt="Sida Logo"  className="h-12 w-32" />
+           <img src="/images/logo.png" alt="Sida Logo"  className="h-24 w-64" />
         </div>
 
         <div className="hidden md:flex items-center gap-8">
